@@ -1,10 +1,10 @@
 import React from 'react'
 import DivDash from '../components/comp_cont_dashboard'
 
-const Ventas = () => {
+const FacturasBuscar = () => {
   return (
-    <DivDash>Ventas</DivDash>
+    <DivDash>Buscar Facturas</DivDash>
   )
 }
 
-export default Ventas
+export default FacturasBuscar

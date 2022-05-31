@@ -1,17 +1,18 @@
-// import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { useAuth } from '../context/Authcontext'
 // import { useAuth } from '../utils/context/Authcontext'
 // import { nameRolUser } from '../utils/helpers/Helpers'
 
 function SidebarHook() {
   //  ----  Variables ----
-  // const currentpage = useLocation().pathname
-  // const { userData } = useAuth()
-  // const { rol } = userData
+  const currentpage = useLocation().pathname
+  const { userData } = useAuth()
+  const { rol } = userData
   // let nameRol = nameRolUser(userData.rol)
   //  ----- Methods ------
   const hidenLinks = (link) => {
-    // return userData.fuctions[`${link}`]
-    return false
+    return userData.fuctions[`${link}`]
+    // return false
   }
   const hidenallmenu = (list) => {
     return false

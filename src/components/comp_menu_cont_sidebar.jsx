@@ -31,7 +31,7 @@ const MenuAcContainer = ({
               <span className="pc-micon file">
                 <i className={`fas ${faIcon}`}></i>
               </span>
-              <span className="pc-mtext">{NameMenu}</span>
+              <span className="pc-mtext"><span className=''>{NameMenu}</span></span>
               <span className="pc-arrow">
                 <i className="fas fa-chevron-right"></i>
               </span>

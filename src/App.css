@@ -127,9 +127,10 @@
 
 .pc-sidebar .pc-micon {
   margin-right: 15px;
-  height: 24px;
+  height: 15px;
   display: inline-block;
   vertical-align: middle;
+  
 }
 
 .pc-sidebar .boxes i {
@@ -185,8 +186,9 @@
   display: block;
   padding: 14px 20px;
   color: #484d53;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
+  text-decoration: none ;
 }
 .btn-menu-slide {
   cursor: pointer;
@@ -195,8 +197,8 @@
 .pc-sidebar .pc-link:active,
 .pc-sidebar .pc-link:focus,
 .pc-sidebar .pc-link:hover {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: none ;
+  color: rgb(49, 49, 49);
 }
 
 .title-active .pc-micon i {
@@ -211,8 +213,9 @@
 
 .active-selection {
   text-decoration: none !important;
-  color: #ffc107 !important;
+  color: #5b9e7f !important;
   font-weight: 500 !important;
+  
 }
 
 .pc-sidebar .pc-link:active .pc-micon i,
@@ -221,12 +224,13 @@
 .pc-sidebar .pc-link:focus .pc-micon svg,
 .pc-sidebar .pc-link:hover .pc-micon i,
 .pc-sidebar .pc-link:hover .pc-micon svg {
-  color: #fff;
+  color: #5b9e7f;
 }
 
 .pc-sidebar .pc-arrow {
-  display: inline-block;
+  float: right;
   transition: all 0.2s ease-in-out;
+  font-size: 10px;
 }
 
 .pc-sidebar .pc-arrow > svg {
@@ -316,7 +320,8 @@ body:not(.minimenu) .pc-sidebar .pc-submenu .pc-item:before {
   content: '→';
   position: absolute;
   left: 40px;
-  top: 10px;
+  top: 9px;
+  font-size: 14px;
   z-index: 1;
   transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
   color: #778290;
@@ -391,7 +396,7 @@ body:not(.minimenu)
 }
 
 .minimenu .pc-sidebar .pc-link {
-  padding: 20px 25px;
+  padding: 8px 25px;
 }
 
 .minimenu .pc-sidebar .pc-submenu {
@@ -412,7 +417,7 @@ body:not(.minimenu)
 .minimenu .pc-sidebar .pc-item:hover > .pc-link {
   width: calc(200px + 70px);
   background: #b4c6e0;
-  color: #fff;
+  color: #5b9e7f;
 }
 
 .minimenu .pc-sidebar .pc-item:hover > .pc-link .pc-micon {
@@ -420,7 +425,7 @@ body:not(.minimenu)
 }
 
 .minimenu .pc-sidebar .pc-item:hover > .pc-link .pc-micon i {
-  color: #fff;
+  color: #5b9e7f;
 }
 
 .minimenu .pc-sidebar .pc-item:hover > .pc-link .pc-mtext {
@@ -493,3 +498,4 @@ body:not(.minimenu)
 .pc-container .page-header + .pcoded-content {
   padding-top: calc(30px + 55px);
 }
+
