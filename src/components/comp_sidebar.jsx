@@ -30,23 +30,15 @@ const SideBar = () => {
             </li>
             <MenuAcContainer
               onCloseId="sideBarMenu"
-              isHidenMenu={false}
-              // isHidenMenu={hidenallmenu([
-              //   'guia_envios',
-              //   'guia_retiros',
-              //   'guia_retororno',
-              //   'guia_notificaciones',
-              //   'guia_carga',
-              // ])}
+              isHidenMenu={hidenallmenu(['ventas_crear'])}
               sectionOpen="ventas"
               NameMenu="Ventas"
               idRef="vent"
               faIcon="fa-credit-card"
               listLinks={[
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('ventas_crear'),
+                  isActive: hidenLinks('ventas_crear'),
                   path: '/dashboard/ventas',
                   name: 'Registro de Ventas',
                 },
@@ -54,59 +46,42 @@ const SideBar = () => {
             />
             <MenuAcContainer
               onCloseId="sideBarMenu"
-              isHidenMenu={hidenallmenu([
-                'factura_crear',
-                'factura_crear',
-              ])}
+              isHidenMenu={hidenallmenu(['factura_crear', 'factura_buscar'])}
               sectionOpen="fac"
               NameMenu="Facturas"
               idRef="fac"
-              faIcon="fa-file"
+              faIcon="fa-user-circle"
               listLinks={[
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  isActive: hidenLinks('factura_crear'),
-                  path: '/dashboard/facturas',
-                  name: 'Facturas Pendientes',
-                },
-                {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  isActive: hidenLinks('factura_buscar'),
+                  hiden: hidenLinks('factura_buscar'),
+                  isActive: true,
                   path: '/dashboard/facturas/buscar',
                   name: 'Buscar Faturas',
                 },
+                {
+                  hiden: hidenLinks('factura_crear'),
+                  isActive: true,
+                  path: '/dashboard/facturas/pendientes',
+                  name: 'Facturas Pendientes',
+                },
               ]}
             />
-
             <MenuAcContainer
               onCloseId="sideBarMenu"
-              isHidenMenu={false}
-              // isHidenMenu={hidenallmenu([
-              //   'guia_envios',
-              //   'guia_retiros',
-              //   'guia_retororno',
-              //   'guia_notificaciones',
-              //   'guia_carga',
-              // ])}
+              isHidenMenu={hidenallmenu(['balances_crear', 'balances_buscar'])}
               sectionOpen="cierreCaja"
               NameMenu="Caja"
               idRef="caja"
               faIcon="fa-cash-register"
               listLinks={[
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  // isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('balances_crear'),
                   isActive: true,
                   path: '/dashboard/balances',
                   name: 'Balance Diario',
                 },
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  // isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('balances_buscar'),
                   isActive: true,
                   path: '/dashboard/balances/buscar',
                   name: 'Buscar Balances',
@@ -115,23 +90,14 @@ const SideBar = () => {
             />
             <MenuAcContainer
               onCloseId="sideBarMenu"
-              isHidenMenu={false}
-              // isHidenMenu={hidenallmenu([
-              //   'guia_envios',
-              //   'guia_retiros',
-              //   'guia_retororno',
-              //   'guia_notificaciones',
-              //   'guia_carga',
-              // ])}
+              isHidenMenu={hidenallmenu(['inventario_crear'])}
               sectionOpen="invet"
               NameMenu="Inventario"
               idRef="invt"
               faIcon="fa-box"
               listLinks={[
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  // isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('inventario_crear'),
                   isActive: true,
                   path: '/dashboard/inventario/gestionar',
                   name: 'Gestionar Productos',
@@ -140,31 +106,23 @@ const SideBar = () => {
             />
             <MenuAcContainer
               onCloseId="sideBarMenu"
-              isHidenMenu={false}
-              // isHidenMenu={hidenallmenu([
-              //   'guia_envios',
-              //   'guia_retiros',
-              //   'guia_retororno',
-              //   'guia_notificaciones',
-              //   'guia_carga',
-              // ])}
+              isHidenMenu={hidenallmenu([
+                'usuarios_crear',
+                'usuarios_acciones',
+              ])}
               sectionOpen="user"
               NameMenu="Gestion de Usuarios"
               idRef="user"
               faIcon="fa-user-circle"
               listLinks={[
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  // isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('usuarios_crear'),
                   isActive: true,
                   path: '/dashboard/configuracion/usuarios/crear',
                   name: 'Crear Usuarios',
                 },
                 {
-                  // hiden: hidenLinks('guia_envios'),
-                  hiden: true,
-                  // isActive: hidenLinks('guia_envios'),
+                  hiden: hidenLinks('usuarios_acciones'),
                   isActive: true,
                   path: '/dashboard/configuracion/usuarios/acciones',
                   name: 'Asignar Acciones',

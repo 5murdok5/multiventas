@@ -1,7 +1,18 @@
 export const currentPageOpen = (type) => {
     switch (type) {
-      case '/dashboard':
-        return 'inicio'
+      case '/dashboard/ventas':
+        return 'ventas'
+      case '/dashboard/facturas/pendientes':
+      case '/dashboard/facturas/buscar':
+        return 'fac'
+      case '/dashboard/balances':
+      case '/dashboard/balances/buscar':
+        return 'Caja'
+      case '/dashboard/inventario/gestionar':
+        return 'invet'
+      case '/dashboard/configuracion/usuarios/acciones':
+      case '/dashboard/configuracion/usuarios/crear':
+        return 'user'
       default:
         return ''
     }
@@ -11,7 +22,7 @@ export const currentPageOpen = (type) => {
     switch (type) {
       case '/dashboard/ventas':
         return 'ventas_crear'
-      case '/dashboard/facturas':
+      case '/dashboard/facturas/pendientes':
         return 'factura_crear'
       case '/dashboard/facturas/buscar':
         return 'factura_buscar'

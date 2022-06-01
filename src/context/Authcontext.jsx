@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { userTest } from '../helpers/helpers_const'
 
 export const authContext = createContext()
 
@@ -20,16 +20,22 @@ export function AuthProvider({ childdren }) {
     // await dispatch(InitAuth(id, updateuser, undefined, logout))
   }
 
-  // useEffect(() => {
-  //   const user = getUserdata()
-  //   return () => user
-  // }, [])
+  useEffect(() => {
+    const user = getUserdata()
+    return () => user
+  }, [])
   const getUserdata = async () => {
-    const data = JSON.parse(localStorage.getItem('dataProfile'))
-    if (data !== null && data?.id !== undefined) {
-      await getuserdata(data?.id)
-    }
-    setLoading(false)
+    setuserData(userTest)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    console.log('-------set user data -----')
+    //   const data = JSON.parse(localStorage.getItem('dataProfile'))
+    //   if (data !== null && data?.id !== undefined) {
+    //     await getuserdata(data?.id)
+    //   }
+    //   setLoading(false)
   }
 
   const logout = () => {

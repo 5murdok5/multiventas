@@ -15,8 +15,8 @@ const MenuAcContainer = ({
   return (
     <>
       {isHidenMenu === false && (
-        <ul id={idRef}>
-          <li className="btn-menu-slide">
+        <ol id={idRef}>
+          <ul className="btn-menu-slide">
             <a
               className={
                 currentPageOpen(currentpage) === sectionOpen
@@ -31,13 +31,15 @@ const MenuAcContainer = ({
               <span className="pc-micon file">
                 <i className={`fas ${faIcon}`}></i>
               </span>
-              <span className="pc-mtext"><span className=''>{NameMenu}</span></span>
+              <span className="pc-mtext">
+                <span className="">{NameMenu}</span>
+              </span>
               <span className="pc-arrow">
                 <i className="fas fa-chevron-right"></i>
               </span>
             </a>
-          </li>
-          <li
+          </ul>
+          <ul
             className={`pc-submenu collapse ${
               currentPageOpen(currentpage) === sectionOpen && 'show'
             }`}
@@ -51,7 +53,9 @@ const MenuAcContainer = ({
                   <li className="pc-item" key={`${vlInk.path}_${index}`}>
                     <NavLink
                       className={({ isActive }) =>
-                        isActive ? 'pc-link active-selection' : 'pc-link'
+                        isActive === true
+                          ? 'pc-link active-selection'
+                          : 'pc-link'
                       }
                       to={vlInk?.path}
                     >
@@ -63,8 +67,8 @@ const MenuAcContainer = ({
                 return <></>
               }
             })}
-          </li>
-        </ul>
+          </ul>
+        </ol>
       )}
     </>
   )

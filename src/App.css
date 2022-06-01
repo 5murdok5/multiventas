@@ -130,7 +130,6 @@
   height: 15px;
   display: inline-block;
   vertical-align: middle;
-  
 }
 
 .pc-sidebar .boxes i {
@@ -174,7 +173,10 @@
   font-size: 22px;
   display: inline-block;
 }
-
+ol,
+ul {
+  padding-left: 0rem !important;
+}
 .pc-sidebar .pc-micon > svg {
   width: 18px;
   height: 18px;
@@ -188,7 +190,7 @@
   color: #484d53;
   font-size: 12px;
   font-weight: 400;
-  text-decoration: none ;
+  text-decoration: none;
 }
 .btn-menu-slide {
   cursor: pointer;
@@ -197,25 +199,24 @@
 .pc-sidebar .pc-link:active,
 .pc-sidebar .pc-link:focus,
 .pc-sidebar .pc-link:hover {
-  text-decoration: none ;
+  text-decoration: none;
   color: rgb(49, 49, 49);
 }
 
 .title-active .pc-micon i {
   text-decoration: none !important;
-  color: #fff !important;
+  color: #5b9e7f !important;
 }
 
 .title-active {
   text-decoration: none !important;
-  color: #fff !important;
+  color: #5b9e7f !important;
 }
 
 .active-selection {
   text-decoration: none !important;
   color: #5b9e7f !important;
   font-weight: 500 !important;
-  
 }
 
 .pc-sidebar .pc-link:active .pc-micon i,
@@ -499,3 +500,247 @@ body:not(.minimenu)
   padding-top: calc(30px + 55px);
 }
 
+/* -------- Title Cards---------- */
+.icon-container {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #5b9e7f;
+  color: rgba(255, 255, 255, 0.911);
+  text-align: center;
+  font-size: 15px;
+  box-shadow: rgba(100, 100, 111, 0.103) 0px 7px 29px 0px;
+}
+
+.title-section {
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: initial;
+  margin-left: 10px;
+  color: #0000007a;
+  line-height: 17px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title-section-nm {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: initial;
+  color: #1c222f;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  font-family: 'Raleway', sans-serif;
+}
+.subtitle-section-nm {
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: initial;
+  color: #0000007a;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: initial;
+  margin-left: 10px;
+  color: #525f71;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* btn user title */
+
+.btn-user {
+  /* margin-left: 15px; */
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #5b9e7f;
+  color: white;
+}
+
+.btn-user #user {
+  font-weight: 700;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+.icon-acordeon {
+  background-color: #ffc107;
+  padding: 0px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+}
+.btn-user .icon-btn-user {
+  font-size: 12px;
+  padding-right: 8px;
+}
+.menu-custom {
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+}
+.menu-custom li a i {
+  font-size: 14px;
+}
+.menu-custom li {
+  font-size: 14px !important;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Card */
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 42, 112, 0.041);
+}
+
+.card-header,
+.card-footer {
+  border-color: #ebeef4;
+  background-color: #fff;
+  color: #798eb3;
+  padding: 0px;
+}
+
+.card-title {
+  padding: 20px 0 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: 'Poppins', sans-serif;
+}
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dashboard .card-icon {
+  font-size: 20px;
+  line-height: 0;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.dashboard .sales-card .card-icon {
+  color: #4154f1;
+  background: #f6f6fe;
+}
+.dashboard .revenue-card .card-icon {
+  color: #2eca6a;
+  background: #e0f8e9;
+}
+.dashboard .customers-card .card-icon {
+  color: #ff771d;
+  background: #ffecdf;
+}
+
+/* Recent Sales */
+.dashboard .recent-sales {
+  font-size: 14px;
+}
+.dashboard .recent-sales .table thead {
+  background: #f6f6fe;
+}
+.dashboard .recent-sales .table thead th {
+  border: 0;
+}
+.dashboard .recent-sales .dataTable-top {
+  padding: 0 0 10px 0;
+}
+.dashboard .recent-sales .dataTable-bottom {
+  padding: 10px 0 0 0;
+}
+
+
+.guia-form .form-guia::placeholder {
+  opacity: 1;
+  color: #cacaca !important;
+}
+
+.guia-form .form-guia:-ms-input-placeholder {
+  color: #cacaca !important;
+}
+
+.guia-form .form-guia::-ms-input-placeholder {
+  color: #cacaca !important;
+}
+
+
+/*--------------------------------------------------------------
+# Login
+--------------------------------------------------------------*/
+
+.login-btn {
+  background-color: #30384e;
+  border: 1px solid #444;
+  border-radius: 6px !important;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 20px !important;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+}
+
+.login-btn:hover {
+  color: #ffffff;
+  background-color: #55638a;
+  border-color: #30384e !important;
+}
+
+.field-icon {
+  float: right;
+  margin-right: 10px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 3;
+  color: #999;
+}
+
+.section-img img {
+  object-fit: cover;
+}
+
+.btn-home {
+  background-color: transparent;
+  color: #30384e;
+  text-align: center;
+  width: 100%;
+}
+.btn-home:hover {
+  color: #62729e;
+  font-weight: 500;
+  text-decoration: underline #62729e;
+}
+.error-input {
+  font-size: 13px;
+  color: rgb(219, 95, 95);
+  padding-bottom: 0px !important;
+  position: absolute;
+  margin-top: -2px !important;
+}
+
+.idcode-lg {
+  width: 17rem;
+  opacity: 0.4;
+}
+.pg-log{
+  height: 90vh;
+}
