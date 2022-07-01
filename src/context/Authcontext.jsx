@@ -25,7 +25,7 @@ export function AuthProvider({ childdren }) {
     return () => user
   }, [])
   const getUserdata = async () => {
-    setuserData(userTest)
+    // setuserData(userTest) //comentar para ver login aqui setea el usuario obtenido para pasar a login
     setTimeout(() => {
       setLoading(false)
     }, 1500)

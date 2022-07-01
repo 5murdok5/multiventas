@@ -1,9 +1,10 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom"
-import { useAuth } from "../context/Authcontext"
-import { roluser } from "../helpers/helpers_user_actions"
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/Authcontext'
+import { roluser } from '../helpers/helpers_user_actions'
 
+import React from 'react'
 
-const Titles = ({
+const CompTitles = ({
   icon = 'fa-file',
   title = 'Title temp',
   description = 'Id Lorem culpa nulla quis officia reprehenderit',
@@ -12,15 +13,15 @@ const Titles = ({
   const navigate = useNavigate()
   const salir = async () => {
     const exitapp = async () => {
-    //   try {
-    //     toastcustoms('load', `Cerrando Sesion`, 'top-left')
-    //     await logout()
-    //     dismiseAllToast()
-    //     navigate('/login')
-    //   } catch (error) {
-    //     dismiseAllToast()
-    //     toastcustoms('error', `Error al Salir ${error}`, 'top-left')
-    //   }
+      //   try {
+      //     toastcustoms('load', `Cerrando Sesion`, 'top-left')
+      //     await logout()
+      //     dismiseAllToast()
+      //     navigate('/login')
+      //   } catch (error) {
+      //     dismiseAllToast()
+      //     toastcustoms('error', `Error al Salir ${error}`, 'top-left')
+      //   }
     }
     // showAlertAacept('Estas seguro de salir?', '', async () => await exitapp())
   }
@@ -48,23 +49,6 @@ const Titles = ({
         </div>
       </div>
       <div className="d-flex flex-row align-items-center">
-        <div className="px-3 text-nowrap">
-          {(userData.rol === 'Corporativo' || userData.rol === 'admin') && (
-            <NavLink to="/dashboard/solicitarRetiro">
-              <div
-                className={`exitApp text-nowrap${
-                  isActiveSolicitar() === true ? 'exitApp-active' : 'exitApp'
-                }`}
-              >
-                <i
-                  className="fas fa-inbox px-2 icon-str"
-                  aria-hidden="true"
-                ></i>
-                <span className="exitApp-txt">Solicitar Retiro</span>
-              </div>
-            </NavLink>
-          )}
-        </div>
         <div className="dropdown">
           <button
             className="btn-user text-nowrap"
@@ -99,4 +83,4 @@ const Titles = ({
   )
 }
 
-export default Titles
+export default CompTitles
