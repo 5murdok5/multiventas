@@ -12,7 +12,7 @@ class WdSocialLg extends StatelessWidget {
       children: [
         text(
           '~ o Atraves de ~',
-          padding: const EdgeInsets.only(top: 25, bottom: 35),
+          padding: const EdgeInsets.only(top: 25, bottom: 30),
         ),
         socials(),
       ],

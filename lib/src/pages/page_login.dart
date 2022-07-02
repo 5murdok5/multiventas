@@ -16,10 +16,8 @@ class PgLogn extends StatelessWidget {
     return GestureDetector(
       onTap: () => dismisKeybr(context),
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: OverlayCont(
-            widget: contFormLg(),
-          ),
+        body: OverlayCont(
+          widget: contFormLg(),
         ),
       ),
     );
@@ -30,9 +28,6 @@ class PgLogn extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: paddInit,
       ),
-      width: width,
-      //CHnage
-      height: height,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,17 +55,7 @@ class PgLogn extends StatelessWidget {
   }
 
   Widget formLogin(bool formLg) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        const SizedBox(
-          height: 40,
-        ),
-        FomrComponet(isLogin: formLg),
-      ],
-    );
+    return FomrComponet(isLogin: formLg);
   }
 
   Widget btnRegister() {

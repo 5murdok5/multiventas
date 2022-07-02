@@ -17,10 +17,8 @@ class PgRegister extends StatelessWidget {
       child: GestureDetector(
         onTap: () => dismisKeybr(context),
         child: Scaffold(
-          body: SingleChildScrollView(
-            child: OverlayCont(
-              widget: contFormLg(),
-            ),
+          body: OverlayCont(
+            widget: contFormLg(),
           ),
         ),
       ),
@@ -30,8 +28,6 @@ class PgRegister extends StatelessWidget {
   Widget contFormLg() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: paddInit),
-      width: width,
-      height: height,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,

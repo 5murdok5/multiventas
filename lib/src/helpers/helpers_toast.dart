@@ -71,6 +71,12 @@ toast(
 Map<String, Color> types(type) {
   int alphaColor = 200;
   switch (type) {
+    case 'success':
+      return {
+        'color':
+            const Color.fromARGB(255, 189, 255, 184).withAlpha(alphaColor + 10),
+        'text': const Color.fromARGB(255, 70, 70, 70),
+      };
     case 'error':
       return {
         'color': Colors.redAccent.withAlpha(alphaColor + 10),

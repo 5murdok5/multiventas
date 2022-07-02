@@ -14,15 +14,14 @@ class OverlayCont extends StatelessWidget {
       width: width,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          return Stack(
-            children: [
-              topSection(constraints.maxHeight),
-              bottomSection(constraints.maxHeight),
-              Transform.translate(
-                  offset: Offset(0, constraints.maxHeight <= 400 ? -10 : 0),
-                  child: iconCont()),
-              widget ?? const SizedBox(),
-            ],
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                topSection(constraints.maxHeight),
+                widget ?? const SizedBox(),
+                bottomSection(constraints.maxHeight),
+              ],
+            ),
           );
         },
       ),
@@ -45,33 +44,29 @@ class OverlayCont extends StatelessWidget {
   }
 
   Widget topSection(double hgScreen) {
-    return Transform.translate(
-      offset: Offset(0, hgScreen <= 400 ? -20 : 0),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: CustomPaint(
+    return Stack(
+      children: [
+        CustomPaint(
           size: Size(
             width * 2,
             height * 0.2,
           ), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
           painter: RPSCustomPainter(),
         ),
-      ),
+        iconCont()
+      ],
     );
   }
 
   Widget bottomSection(double hgScreen) {
-    return Transform.translate(
-      offset: Offset(0, hgScreen <= 400 ? 20 : 10),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: CustomPaint(
-          size: Size(
-              width * 2,
-              height *
-                  0.2), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-          painter: RPSCustomPainterBottom(),
-        ),
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: CustomPaint(
+        size: Size(
+            width * 2,
+            height *
+                0.2), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+        painter: RPSCustomPainterBottom(),
       ),
     );
   }
