@@ -71,13 +71,7 @@ class FomrComponet extends StatelessWidget {
             title: 'Nombres',
             showError: false,
             prefixIcon: const Icon(Icons.supervised_user_circle_rounded),
-            validator: (text) {
-              if (text!.isEmpty) {
-                return 'Este campo esta vacio';
-              } else {
-                return null;
-              }
-            },
+            validator: _auth.validatorName,
           ),
           const Input(
             prefixIcon: Icon(Icons.phone),
